@@ -12,7 +12,7 @@ export const PrimaryNav = () => {
       <div className="logo">
         <Image src={logo} width={120}></Image>
       </div>
-      <ul className="hidden md:flex md:items-center mr-4 ">
+      <ul className="hidden md:flex md:items-center mr-3 text-[14px]">
         {navLinks.map(({ id, link, title }) => (
           <li
             key={id}

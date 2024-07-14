@@ -5,7 +5,7 @@ import SearchBar from './searchBar'
 
 const Hero = () => {
   return (
-    <section className='bg-[#111111] w-screen flex flex-col items-center justify-center gap-y-6  '>
+    <section className='bg-[#111111]  flex flex-col items-center justify-center gap-y-6 pt-14 '>
         <div className="logo">
             <Image src={logo} width={300}/>
         </div>
