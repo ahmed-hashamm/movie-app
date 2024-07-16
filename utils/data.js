@@ -48,7 +48,7 @@ export const HomeNavLinks = [
         id: 2,
         genres: [
           { id: 8, name: "Romance", link: "/genre/romance" },
-          { id: 9, name: "Science Fiction", link: "/genre/science-fiction" },
+          { id: 9, name: "Science ", link: "/genre/science" },
           { id: 10, name: "Thriller", link: "/genre/thriller" },
           { id: 11, name: "Western", link: "/genre/western" },
           { id: 12, name: "Biography", link: "/genre/biography" },
@@ -83,7 +83,7 @@ export const HomeNavLinks = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     title: "Country",
     link: "#",
     dropdown: [
@@ -109,8 +109,8 @@ export const HomeNavLinks = [
           { id: 12, name: "Bolivia", link: "/country/bolivia" },
           {
             id: 13,
-            name: "Bosnia and Herzegovina",
-            link: "/country/bosnia-and-herzegovina",
+            name: "Bosnia",
+            link: "/country/bosnia",
           },
           { id: 14, name: "Botswana", link: "/country/botswana" },
         ],
@@ -132,8 +132,8 @@ export const HomeNavLinks = [
         countries: [
           {
             id: 22,
-            name: "Central African Republic",
-            link: "/country/central-african-republic",
+            name: "Central Africa",
+            link: "/country/central-africa",
           },
           { id: 23, name: "Chad", link: "/country/chad" },
           { id: 24, name: "Chile", link: "/country/chile" },
