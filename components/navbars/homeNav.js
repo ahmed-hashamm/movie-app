@@ -42,7 +42,7 @@ export const HomeNav = () => {
   };
 
   return (
-    <nav className="px-6 py-4 bg-[#1F1F1F] h-16 w-full flex justify-between items-center font-medium leading-10 tracking-wider text-white">
+    <nav className="px-6 py-4 bg-black lg:bg-[#1F1F1F] h-16 w-full flex justify-between items-center font-medium leading-10 tracking-wider text-white">
       <div className="logo order-2">
         <Image src={logo} width={120} alt="Logo" />
       </div>
@@ -121,7 +121,7 @@ export const HomeNav = () => {
           nav ? "bg-[#5E5E5E]" : "bg-[#121212]"
         }`}
       >
-        <GiHamburgerMenu className="pb-[1px]" />
+        <GiHamburgerMenu size={20} />
       </button>
       {nav && (
         <div className="absolute top-0 w-80 z-2 left-0 h-screen  ">
