@@ -4,8 +4,8 @@ import DesktopSearchBAr from "./desktopSearchBAr";
 const HomeHero = () => {
   return (
     <>
-      <div class="relative lg:hidden flex justify-center items-center  px-1 pb-6 sm:pt-2  w-full bg-black">
-        <div class="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_2px,transparent_2px),linear-gradient(to_bottom,#4f4f4f2e_2px,transparent_2px)] bg-[size:14px_24px]"></div>{" "}
+      <div className="relative lg:hidden flex justify-center items-center  px-1 pb-6 sm:pt-2  w-full bg-black">
+        <div className="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_2px,transparent_2px),linear-gradient(to_bottom,#4f4f4f2e_2px,transparent_2px)] bg-[size:14px_24px]"></div>{" "}
         <MobSearchBar />
       </div>
       

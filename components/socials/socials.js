@@ -19,7 +19,7 @@ const Socials = () => {
         <FaFacebookF size={15}  />
         <span className={`${styles.shareStyles}`}>17.3k</span>
       </button>
-      <button className={`${styles.socialButtons}`}>
+      <button className={`${styles.socialButtons} bg-black`}>
         <FaXTwitter size={15} />
 
         <span className={`${styles.shareStyles} `}>17.3k</span>
