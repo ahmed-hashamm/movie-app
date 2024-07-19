@@ -7,7 +7,7 @@ const DesktopSearchBAr = () => {
       <div className="relative w-3/4 flex gap-4 bg-white justify-center  items-center p-6 rounded-full">
         <FaSearch className="pb-1" size={25} />
         <input
-          className="w-full text-2xl focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-blue-900"
+          className="w-full text-2xl focus:outline-none   "
           type="search"
           placeholder="Enter keywords..."
         />

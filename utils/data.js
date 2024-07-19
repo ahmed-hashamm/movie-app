@@ -228,3 +228,36 @@ export const otherSitesData = [
       "This platform is a treasure trove for movie aficionados, hosting a vast selection of HD-quality films and series. The site covers every genre imaginable, and all you have to do is sit back, choose a film, and immerse yourself in its world.",
   },
 ];
+export const DefaultFooterLinks = [
+  {
+    id: 1,
+    title: "Android App",
+    link: "",
+  },
+
+  {
+    id: 2,
+    title: "Terms of Service",
+    link: "",
+  },
+  {
+    id: 3,
+    title: "Contact",
+    link: "",
+  },
+  {
+    id: 4,
+    title: "Sitemap",
+    link: "",
+  },
+  {
+    id: 5,
+    title: "Author",
+    link: "",
+  },
+  {
+    id: 6,
+    title: "FAQ",
+    link: "",
+  },
+];

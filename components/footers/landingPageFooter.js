@@ -1,7 +1,7 @@
 import { footerLinks } from "@/utils/data";
 import Link from "next/link";
 import React from "react";
-const Footer = () => {
+const DefaultFooter = () => {
   return (
     <footer className="flex-col justify-center items-center w-full text-white">
       <ul className="p-5 text-[14px] flex flex-wrap justify-center items-center gap-4 tracking-wider">
@@ -27,4 +27,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default DefaultFooter;
