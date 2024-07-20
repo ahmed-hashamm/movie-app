@@ -4,7 +4,7 @@ import ShowsButton from "@/components/buttons/showsButton";
 import DefaultFooter from "@/components/footers/defaultFooter";
 import HomeHero from "@/components/homeHero/hero";
 import MoviesSection from "@/components/moviesSection/moviesSection";
-import { HomeNav } from "@/components/navbars/homeNav";
+import { DefaultNav } from "@/components/navbars/defaulNav";
 import Socials from "@/components/socials/socials";
 
 
@@ -40,7 +40,7 @@ const Home = () => {
   };
   return (
     <>
-      <HomeNav />
+      <DefaultNav  visibility={"hidden"} bgColor={"bg-[#000}"} desktopNavColor={"bg-[#1F1F1F]"} longinButtonBg={"md:bg-[#333333]"} />
       <HomeHero />
       <section className="bg-[#1F1F1F]  h-max lg:bg-[#111111] py-2 lg:py-16 px-4 ">
         <Socials />

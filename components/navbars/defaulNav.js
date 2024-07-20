@@ -9,8 +9,14 @@ import MobileNavCloseButton from "../buttons/mobileNavCloseButton";
 import LoginButton from "../buttons/login";
 import { AiFillPlusSquare } from "react-icons/ai";
 import { FaSquareMinus } from "react-icons/fa6";
+import DefaultSearch from "./search";
 
-export const HomeNav = () => {
+export const DefaultNav = ({
+  bgColor,
+  visibility,
+  desktopNavColor,
+  longinButtonBg,
+}) => {
   const [nav, setNav] = useState(false);
   const [genreDropdownOpen, setGenreDropdownOpen] = useState(false);
   const [countryDropdownOpen, setCountryDropdownOpen] = useState(false);
@@ -42,11 +48,13 @@ export const HomeNav = () => {
   };
 
   return (
-    <nav className="px-6 py-4 bg-black lg:bg-[#1F1F1F] h-16 w-full flex justify-between items-center font-medium leading-10 tracking-wider text-white">
+    <nav
+      className={`${bgColor} ${desktopNavColor} px-6 py-4  h-16 w-full flex justify-between items-center font-medium leading-10 tracking-wider text-white`}
+    >
       <div className="logo order-2">
         <Image src={logo} width={120} alt="Logo" />
       </div>
-      <ul className="hidden lg:flex lg:items-center lg:order-2 text-[14px]">
+      <ul className="hidden lg:flex lg:items-center lg:order-2 lg:mr-14 text-[14px]">
         {HomeNavLinks.map(({ id, link, title, dropdown }) => (
           <li
             key={id}
@@ -125,7 +133,9 @@ export const HomeNav = () => {
       </button>
       {nav && (
         <div className="absolute top-0 w-80 z-2 left-0 h-screen  ">
-          <ul className="absolute top-18 text-xl  flex flex-col bg-[#151515] w-full p-8 items-start gap-6 text-white h-screen">
+          <ul
+            className={`bg-[#151515] absolute top-18 text-xl  flex flex-col  w-full p-8 items-start gap-6 text-white h-screen`}
+          >
             <MobileNavCloseButton setNav={setNav} />
             {HomeNavLinks.map(({ id, link, title, dropdown }) => (
               <div
@@ -184,7 +194,7 @@ export const HomeNav = () => {
                             ))}
                           </ul>
                         ) : (
-                          <ul >
+                          <ul>
                             {group.countries.map((country) => (
                               <li key={country.id} className="py-2">
                                 <Link href={country.link}>{country.name}</Link>
@@ -201,8 +211,10 @@ export const HomeNav = () => {
           </ul>
         </div>
       )}
-      <div className="text-white order-3">
-        <LoginButton />
+      <div className="text-white order-3   flex gap-6 justify-center items-center">
+        <DefaultSearch isVisivible={visibility} />
+
+        <LoginButton bgColor={longinButtonBg} />
       </div>
     </nav>
   );

@@ -5,7 +5,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { navLinks } from "@/utils/data";
-export const PrimaryNav = () => {
+export const LandingPageNav = () => {
   const [nav, setNav] = useState(false);
   return (
     <nav className="px-6 py-4 bg-[#000]  h-16 w-full flex justify-between items-center  font-medium leading-10 tracking-widest">

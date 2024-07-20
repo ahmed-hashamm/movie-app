@@ -27,7 +27,7 @@ const MoviesSection = ({ pageNO, category, heading }) => {
   return (
     <>
       <h2 className="text-3xl ml-2 sm:ml-6 mb-0 text-white">{heading}</h2>
-      <section className=" min-h-screen h-max grid grid-cols-2 sm:grid-cols-3  md:grid-cols-4  lg:grid-cols-6 align-middle place-content-center gap-2   py-5 sm:p-6 mb-20">
+      <section className=" min-h-screen h-max grid grid-cols-2 sm:grid-cols-3  md:grid-cols-4  lg:grid-cols-6 align-middle place-content-center gap-2   py-5 p-6 mb-20">
         {movies.map((movie) => {
           const releaseDate = movie.release_date;
           const year = releaseDate.slice(0, 4);
