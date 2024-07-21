@@ -4,7 +4,7 @@ import { MdKeyboardDoubleArrowLeft } from "react-icons/md";
 import { CgArrowLongRight } from "react-icons/cg";
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 
-const Pagination = ({ currentPage, onPageChange, totalPages }) => {
+const Pagination = ({ currentPage, onPageChange, totalPages,visibility }) => {
   const [maxVisiblePages, setMaxVisiblePages] = useState(3);
 
   const getPageNumbers = () => {
@@ -64,7 +64,7 @@ const Pagination = ({ currentPage, onPageChange, totalPages }) => {
   };
 
   return (
-    <div className="flex justify-center items-center gap-2 lg:mb-10">
+    <div className={`flex justify-center items-center gap-2 lg:mb-10`}>
       <button
         className={`${
           currentPage === 1 ? "hidden" : "block"

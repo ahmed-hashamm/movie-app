@@ -10,12 +10,15 @@ import FilterComponent from "@/components/filter/filterComponent";
 
 const MoviesPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
+  const [filterDropdown, setFilterDropdown] = useState(false);
   const totalPages = 10; // Adjust this based on your data
 
   const handlePageChange = (newPage) => {
     setCurrentPage(newPage);
   };
-
+  const handleFilterDropdown = () => {
+    setFilterDropdown(!filterDropdown);
+  };
   return (
     <>
       <DefaultNav
@@ -28,10 +31,14 @@ const MoviesPage = () => {
       </nav>
       <div className=" p-6 bg-[#282828] md:bg-[#111111] space-y-4">
         <div className="flex justify-between ">
-        <h1 className="text-[#E2E6EA] text-xl md:text-2xl lg:text-3xl font-light">Popular Movies</h1>
-        <FilterButton />
+          <h1 className="text-[#E2E6EA] text-xl md:text-2xl lg:text-3xl font-light">
+            Popular Movies
+          </h1>
+          <FilterButton onClick={handleFilterDropdown} />
         </div>
-        <FilterComponent/>
+        <FilterComponent 
+        visibility={filterDropdown ? "block" : "hidden"}
+        />
       </div>
       <section className="bg-[#282828] md:bg-[#111111] py-2 lg:py-10 ">
         <Pagination
