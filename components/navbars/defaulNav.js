@@ -51,9 +51,9 @@ export const DefaultNav = ({
     <nav
       className={`${bgColor} ${desktopNavColor} px-6 py-4  h-16 w-full flex justify-between items-center font-medium leading-10 tracking-wider text-white`}
     >
-      <div className="logo order-2">
+      <Link href={"/"} className="logo order-2">
         <Image src={logo} width={120} alt="Logo" />
-      </div>
+      </Link>
       <ul className="hidden lg:flex lg:items-center lg:order-2 lg:mr-14 text-[14px]">
         {HomeNavLinks.map(({ id, link, title, dropdown }) => (
           <li

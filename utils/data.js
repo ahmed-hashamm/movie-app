@@ -153,17 +153,17 @@ export const HomeNavLinks = [
   {
     id: 5,
     title: "TV Shows",
-    link: "/shows",
+    link: "/tv-shows",
   },
   {
     id: 6,
     title: "Top IMBD",
-    link: "/topIMBD",
+    link: "/top-imbd",
   },
   {
     id: 7,
     title: "Android App",
-    link: "#",
+    link: "/android-app",
   },
 ];
 
@@ -171,18 +171,18 @@ export const footerLinks = [
   {
     id: 1,
     title: "Android App",
-    link: "",
+    link: "/android-app",
   },
 
   {
     id: 2,
     title: "Terms of Service",
-    link: "",
+    link: "/terms-of-service",
   },
   {
     id: 3,
     title: "Contact",
-    link: "",
+    link: "/contact",
   },
   {
     id: 4,
@@ -232,18 +232,18 @@ export const DefaultFooterLinks = [
   {
     id: 1,
     title: "Android App",
-    link: "",
+    link: "/androip-app",
   },
 
   {
     id: 2,
     title: "Terms of Service",
-    link: "",
+    link: "/terms-of-service",
   },
   {
     id: 3,
     title: "Contact",
-    link: "",
+    link: "/contact",
   },
   {
     id: 4,
@@ -259,5 +259,32 @@ export const DefaultFooterLinks = [
     id: 6,
     title: "FAQ",
     link: "",
+  },
+];
+
+export const androidAppData = [
+  {
+    id: 1,
+    text: "Free HD Movies App for Android with Chromecast support.",
+  },
+  {
+    id: 2,
+    text: "Multiple languages of subtitles.",
+  },
+  {
+    id: 3,
+    text: "Fast streaming speed than on website.",
+  },
+  {
+    id: 4,
+    text: "Absolutely no ads.",
+  },
+  {
+    id: 5,
+    text: "All streaming issues will be fixed in 24 hours.",
+  },
+  {
+    id: 6,
+    text: "Daily updates on both movies and shows.",
   },
 ];

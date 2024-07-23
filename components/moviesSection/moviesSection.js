@@ -4,7 +4,7 @@ import { FaPlay } from "react-icons/fa";
 import React, { useEffect, useState } from "react";
 import { GoDotFill } from "react-icons/go";
 import LoaderComponent from "./loaderComponent";
-const MoviesSection = ({ pageNO, category, heading }) => {
+const MoviesSection = ({ pageNO, category, heading,id }) => {
   const APIURL = `https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=04c35731a5ee918f014970082a0088b1&page=${pageNO}`;
   const IMGPATH = "https://image.tmdb.org/t/p/w1280";
   //   const SEARCHAPI = `https://api.themoviedb.org/3/search/movie?&api_key=04c35731a5ee918f014970082a0088b1&query=`;
@@ -23,19 +23,25 @@ const MoviesSection = ({ pageNO, category, heading }) => {
     fetchMovies();
   }, [APIURL, pageNO]);
 
-
   return (
     <>
       <h2 className="text-3xl ml-2 sm:ml-6 mb-0 text-white">{heading}</h2>
       <section className=" min-h-screen h-max grid grid-cols-2 sm:grid-cols-3  md:grid-cols-4  lg:grid-cols-6 align-middle place-content-center gap-2   py-5 p-4 md:p-6 mb-20">
-        {movies.map((movie) => {  
-            {loading && <LoaderComponent/>}
+        {movies.map((movie) => {
+          {
+            loading && <LoaderComponent />;
+          }
           const releaseDate = movie.release_date;
           const year = releaseDate.slice(0, 4);
+
           return (
-            <figure 
-            key={movie.id} className="relative group w-fit mx-auto text-white cursor-default ">
-               <div className={`absolute h-5/6 inset-0 bg-black bg-opacity-60 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300`}>
+            <figure
+              key={movie.id}
+              className="relative group w-fit mx-auto text-white cursor-default "
+            >
+              <div
+                className={`absolute h-5/6 inset-0 bg-black bg-opacity-60 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
+              >
                 <button className="flex items-center p-5 text-gray-900 bg-[#FFE400] rounded-full focus:outline-none">
                   <FaPlay size={20} />
                 </button>
@@ -63,7 +69,6 @@ const MoviesSection = ({ pageNO, category, heading }) => {
                   </span>
                 </div>
               </div>
-              
             </figure>
           );
         })}
@@ -72,4 +77,3 @@ const MoviesSection = ({ pageNO, category, heading }) => {
   );
 };
 export default MoviesSection;
-

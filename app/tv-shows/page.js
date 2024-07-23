@@ -9,9 +9,9 @@ import MobSearchBar from "@/components/homeHero/mobSearchBAr";
 import FilterComponent from "@/components/filter/filterComponent";
 
 const MoviesPage = () => {
-  const [currentPage, setCurrentPage] = useState(1);
+  const [currentPage, setCurrentPage] = useState(10);
   const [filterDropdown, setFilterDropdown] = useState(false);
-  const totalPages = 10; // Adjust this based on your data
+  const totalPages = 20; 
 
   const handlePageChange = (newPage) => {
     setCurrentPage(newPage);
@@ -32,7 +32,7 @@ const MoviesPage = () => {
       <div className=" p-6 bg-[#282828] md:bg-[#111111] space-y-4">
         <div className="flex justify-between ">
           <h1 className="text-[#E2E6EA] text-xl md:text-2xl lg:text-3xl font-light">
-            Popular Movies
+            Popular TV Shows
           </h1>
           <FilterButton onClick={handleFilterDropdown} />
         </div>
@@ -43,14 +43,14 @@ const MoviesPage = () => {
           currentPage={currentPage}
           onPageChange={handlePageChange}
           totalPages={totalPages}
-          startingPage={1}
+          startingPage={10}
         />
-        <MoviesSection pageNO={currentPage} category={"Movie"} />
+        <MoviesSection pageNO={currentPage} category={"TV"} />
         <Pagination
           currentPage={currentPage}
           onPageChange={handlePageChange}
           totalPages={totalPages}
-          startingPage={1}
+          startingPage={10}
         />
       </section>
       <DefaultFooter />

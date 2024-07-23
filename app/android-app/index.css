@@ -1,0 +1,7 @@
+.bg-custom {
+    background-image: url('../../public/app-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  

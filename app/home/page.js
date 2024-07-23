@@ -14,21 +14,6 @@ const Home = () => {
   const [activeButton, setActiveButton] = useState("movies");
   const [pageNum, setPageNum] = useState(1);
 
-//   useEffect(() => {
-//     if (typeof window !== "undefined") {
-//       const savedButton = localStorage.getItem("activeButton");
-//       if (savedButton) {
-//         setActiveButton(savedButton);
-//       }
-//     }
-//   }, []);
-
-//   useEffect(() => {
-//     if (typeof window !== "undefined") {
-//       localStorage.setItem("activeButton", activeButton);
-//     }
-//   }, [activeButton]);
-
   const handleMoviesClick = () => {
     setActiveButton("movies");
     setPageNum(1); 
@@ -40,7 +25,7 @@ const Home = () => {
   };
   return (
     <>
-      <DefaultNav  visibility={"hidden"} bgColor={"bg-[#000}"} desktopNavColor={"bg-[#1F1F1F]"} longinButtonBg={"md:bg-[#333333]"} />
+      <DefaultNav  visibility={"lg:hidden"} bgColor={"bg-[#000}"} desktopNavColor={"bg-[#1F1F1F]"} longinButtonBg={"md:bg-[#333333]"} />
       <HomeHero />
       <section className="bg-[#1F1F1F]  h-max lg:bg-[#111111] py-2 lg:py-16 px-4 ">
         <Socials />

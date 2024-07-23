@@ -13,11 +13,11 @@ export default function Home() {
       <Hero />
       <div className="space-y-2 ">
       <Socials />
-      <Button text={"View Full Site"} href={"/"} />
+      <Button text={"View Full Site"} href={"/home"} />
       </div>
       <Intro />
       <OtherSites/>
-      <Button text={"Go To AndyDay"} href={"/"} />
+      <Button text={"Go To AndyDay"} href={"/home"} />
       <Footer/>
     </main>
   );
