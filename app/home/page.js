@@ -3,31 +3,45 @@ import MoviesButton from "@/components/buttons/moviesButton";
 import ShowsButton from "@/components/buttons/showsButton";
 import DefaultFooter from "@/components/footers/defaultFooter";
 import HomeHero from "@/components/homeHero/hero";
+import LoginForm from "@/components/loginform/loginFOrm";
 import MoviesSection from "@/components/moviesSection/moviesSection";
 import { DefaultNav } from "@/components/navbars/defaulNav";
 import Socials from "@/components/socials/socials";
-
 
 import React, { useState } from "react";
 
 const Home = () => {
   const [activeButton, setActiveButton] = useState("movies");
   const [pageNum, setPageNum] = useState(1);
-
+  const [login, setLogin] = useState(false);
   const handleMoviesClick = () => {
     setActiveButton("movies");
-    setPageNum(1); 
+    setPageNum(1);
   };
 
   const handleShowsClick = () => {
     setActiveButton("shows");
-    setPageNum(9); 
+    setPageNum(9);
   };
   return (
     <>
-      <DefaultNav  visibility={"lg:hidden"} bgColor={"bg-[#000}"} desktopNavColor={"bg-[#1F1F1F]"} longinButtonBg={"md:bg-[#333333]"} />
+    {login && (
+          <div className="absolute top-8 left-[30%]">
+          <LoginForm onClose={() => setLogin(false)} />
+        </div>
+      )}
+    <section className={`${login && 'opacity-90'} `}>
+
+      <DefaultNav
+        visibility={"lg:hidden"}
+        bgColor={"bg-[#000}"}
+        desktopNavColor={"bg-[#1F1F1F]"}
+        longinButtonBg={"md:bg-[#333333]"}
+        login={login}
+        setLogin={setLogin}
+        />
       <HomeHero />
-      <section className="bg-[#1F1F1F]  h-max lg:bg-[#111111] py-2 lg:py-16 px-4 ">
+      <section className={`bg-[#1F1F1F]  h-max lg:bg-[#111111] py-2 lg:py-16 px-4 `}>
         <Socials />
         <div className="flex gap-x-6 p-6 pb-0  ">
           <h2 className="text-3xl text-white hidden md:block">Trending</h2>
@@ -50,6 +64,7 @@ const Home = () => {
         <MoviesSection heading={"Coming Soon"} pageNO={8} category={"Soon"} />
       </section>
       <DefaultFooter />
+          </section>
     </>
   );
 };

@@ -10,16 +10,20 @@ import LoginButton from "../buttons/login";
 import { AiFillPlusSquare } from "react-icons/ai";
 import { FaSquareMinus } from "react-icons/fa6";
 import DefaultSearch from "./search";
+import LoginForm from "../loginform/loginFOrm";
 
 export const DefaultNav = ({
   bgColor,
   visibility,
   desktopNavColor,
   longinButtonBg,
+  login,
+  setLogin
 }) => {
   const [nav, setNav] = useState(false);
   const [genreDropdownOpen, setGenreDropdownOpen] = useState(false);
   const [countryDropdownOpen, setCountryDropdownOpen] = useState(false);
+  
 
   const openGenreDropdown = () => {
     setGenreDropdownOpen(true);
@@ -47,9 +51,13 @@ export const DefaultNav = ({
     setGenreDropdownOpen(false);
   };
 
+  const handleLogin = () => {
+    setLogin(true);
+   
+  };
   return (
     <nav
-      className={`${bgColor} ${desktopNavColor} px-6 py-4  h-16 w-full flex justify-between items-center font-medium leading-10 tracking-wider text-white`}
+      className={`${bgColor} ${desktopNavColor}  px-6 py-4  h-16 w-full flex justify-between items-center font-medium leading-10 tracking-wider text-white`}
     >
       <Link href={"/"} className="logo order-2">
         <Image src={logo} width={120} alt="Logo" />
@@ -214,8 +222,9 @@ export const DefaultNav = ({
       <div className="text-white order-3   flex gap-6 justify-center items-center">
         <DefaultSearch isVisivible={visibility} />
 
-        <LoginButton bgColor={longinButtonBg} />
+        <LoginButton onClick={handleLogin} bgColor={longinButtonBg} />
       </div>
+     
     </nav>
   );
 };
