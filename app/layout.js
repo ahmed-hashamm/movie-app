@@ -1,5 +1,5 @@
-import { Inter } from "next/font/google";
 import "./globals.css";
+import GlobalProvider from "@/context/Context"; // Make sure the path is correct
 
 export const metadata = {
   title: "Create Next App",
@@ -9,7 +9,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="montserrat-font">{children}</body>
+      <body className="montserrat-font">
+        <GlobalProvider>{children}</GlobalProvider>
+      </body>
     </html>
   );
 }

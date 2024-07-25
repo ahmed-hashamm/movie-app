@@ -7,10 +7,15 @@ import { DefaultNav } from "@/components/navbars/defaulNav";
 import Pagination from "@/components/pagination/pagination";
 import MobSearchBar from "@/components/homeHero/mobSearchBAr";
 import FilterComponent from "@/components/filter/filterComponent";
+import { useGlobalContext } from "@/context/Context";
+import LoginForm from "@/components/loginform/loginFOrm";
 
 const MoviesPage = () => {
   const [currentPage, setCurrentPage] = useState(20);
   const [filterDropdown, setFilterDropdown] = useState(false);
+
+  const { login, setLogin } = useGlobalContext();
+
   const totalPages = 30; // Adjust this based on your data
 
   const handlePageChange = (newPage) => {
@@ -21,6 +26,14 @@ const MoviesPage = () => {
   };
   return (
     <>
+    {login && (
+        <div className="fixed inset-0 bg-[#111111] bg-opacity-80 flex items-center justify-center z-50">
+          <LoginForm onClose={() => setLogin(false)} />
+        </div>
+      )}
+      <section
+        className={`relative ${login ? 'opacity-50' : 'opacity-100'} `}
+      >
       <DefaultNav
         visibility={"visible"}
         bgColor={"bg-[#000]"}
@@ -45,8 +58,8 @@ const MoviesPage = () => {
           totalPages={totalPages}
           startingPage={20}
         />
-        <MoviesSection pageNO={currentPage} category={'Movie'} />
-        <MoviesSection pageNO={currentPage} category={'Shows'} />
+        <MoviesSection pageNO={currentPage} category={"Movie"} />
+        <MoviesSection pageNO={currentPage} category={"Shows"} />
 
         <Pagination
           currentPage={currentPage}
@@ -56,6 +69,7 @@ const MoviesPage = () => {
         />
       </section>
       <DefaultFooter />
+      </section>
     </>
   );
 };

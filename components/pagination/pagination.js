@@ -4,7 +4,7 @@ import { MdKeyboardDoubleArrowLeft } from "react-icons/md";
 import { CgArrowLongRight } from "react-icons/cg";
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 
-const Pagination = ({ currentPage, onPageChange, totalPages,startingPage }) => {
+const Pagination = ({ currentPage, onPageChange, totalPages,visibility }) => {
   const [maxVisiblePages, setMaxVisiblePages] = useState(3);
 
   const getPageNumbers = () => {
@@ -14,7 +14,7 @@ const Pagination = ({ currentPage, onPageChange, totalPages,startingPage }) => {
     let endPage = currentPage + Math.floor(maxVisiblePages / 2);
 
     if (startPage < 1) {
-      startPage = {startingPage};
+      startPage = 1;
       endPage = Math.min(totalPages, startPage + maxVisiblePages - 1);
     }
 

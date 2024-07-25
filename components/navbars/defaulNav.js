@@ -10,20 +10,19 @@ import LoginButton from "../buttons/login";
 import { AiFillPlusSquare } from "react-icons/ai";
 import { FaSquareMinus } from "react-icons/fa6";
 import DefaultSearch from "./search";
-import LoginForm from "../loginform/loginFOrm";
+import { useGlobalContext } from "@/context/Context";
+
 
 export const DefaultNav = ({
   bgColor,
   visibility,
   desktopNavColor,
   longinButtonBg,
-  login,
-  setLogin
 }) => {
   const [nav, setNav] = useState(false);
   const [genreDropdownOpen, setGenreDropdownOpen] = useState(false);
   const [countryDropdownOpen, setCountryDropdownOpen] = useState(false);
-  
+  const { login, setLogin } = useGlobalContext();
 
   const openGenreDropdown = () => {
     setGenreDropdownOpen(true);
@@ -53,7 +52,6 @@ export const DefaultNav = ({
 
   const handleLogin = () => {
     setLogin(true);
-   
   };
   return (
     <nav
@@ -224,7 +222,6 @@ export const DefaultNav = ({
 
         <LoginButton onClick={handleLogin} bgColor={longinButtonBg} />
       </div>
-     
     </nav>
   );
 };
