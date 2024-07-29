@@ -1,7 +1,7 @@
 import { footerLinks } from "@/utils/data";
 import Link from "next/link";
 import React from "react";
-const DefaultFooter = () => {
+const LandingPageFooter = () => {
   return (
     <footer className="flex-col justify-center items-center w-full text-white">
       <ul className="p-5 text-[14px] flex flex-wrap justify-center items-center gap-4 tracking-wider">
@@ -14,7 +14,7 @@ const DefaultFooter = () => {
           </li>
         ))}
       </ul>
-      <div className=" max-w-3xl text-center   mx-auto p-6 flex flex-col gap-4">
+      <section className=" max-w-3xl text-center   mx-auto p-6 flex flex-col gap-4">
         <p className="text-[#4B4B4B] text-xs ">
           AndyDay is a Free Movies streaming site with zero ads. We let you
           watch movies online without having to register or paying, with over
@@ -22,9 +22,9 @@ const DefaultFooter = () => {
           AndyDay and watch it later if you want.
         </p>
         <span className="text-[12px] ">© AndyDay</span>
-      </div>
+      </section>
     </footer>
   );
 };
 
-export default DefaultFooter;
+export default LandingPageFooter;

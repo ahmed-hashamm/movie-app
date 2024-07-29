@@ -7,33 +7,32 @@ import LoginForm from "@/components/loginform/loginFOrm";
 import MoviesSection from "@/components/moviesSection/moviesSection";
 import { DefaultNav } from "@/components/navbars/defaulNav";
 import Socials from "@/components/socials/socials";
-import  { useGlobalContext } from "@/context/Context";
-import React, {useState } from "react";
+import { useGlobalContext } from "@/context/Context";
+import React, { useState } from "react";
 const Home = () => {
   const [activeButton, setActiveButton] = useState("movies");
   const [pageNum, setPageNum] = useState(1);
-  const {login ,setLogin} =useGlobalContext();
+  const { login, setLogin } = useGlobalContext();
 
-  const handleMoviesClick = () => {
+  const handleMoviesButtonClick = () => {
     setActiveButton("movies");
     setPageNum(1);
   };
 
-  const handleShowsClick = () => {
+  const handleShowsButtonClick = () => {
     setActiveButton("shows");
     setPageNum(9);
   };
 
   return (
     <>
+      {/* {displaying form on login button click} */}
       {login && (
-        <div className="fixed inset-0 bg-[#111111] bg-opacity-80 flex items-center justify-center z-50">
+        <div className="fixed inset-0 bg-[#060615] bg-opacity-85 flex items-center justify-center z-50">
           <LoginForm onClose={() => setLogin(false)} />
         </div>
       )}
-      <section
-        className={`relative ${login ? 'opacity-50' : 'opacity-100'} `}
-      >
+      <section className={`relative ${login ? "opacity-50" : "opacity-100"} `}>
         <DefaultNav
           visibility={"lg:hidden"}
           bgColor={"bg-[#000}"}
@@ -50,8 +49,14 @@ const Home = () => {
           <div className="flex gap-x-6 p-6 pb-0">
             <h2 className="text-3xl text-white hidden md:block">Trending</h2>
             <div className="flex gap-2">
-              <MoviesButton isActive={activeButton} onClick={handleMoviesClick} />
-              <ShowsButton isActive={activeButton} onClick={handleShowsClick} />
+              <MoviesButton
+                isActive={activeButton}
+                onClick={handleMoviesButtonClick}
+              />
+              <ShowsButton
+                isActive={activeButton}
+                onClick={handleShowsButtonClick}
+              />
             </div>
           </div>
           <MoviesSection
@@ -59,8 +64,16 @@ const Home = () => {
             category={activeButton === "movies" ? "Movie" : "TV"}
             heading={""}
           />
-          <MoviesSection heading={"Latest Movies"} pageNO={3} category={"Movie"} />
-          <MoviesSection heading={"Latest TV Shows"} pageNO={5} category={"TV"} />
+          <MoviesSection
+            heading={"Latest Movies"}
+            pageNO={3}
+            category={"Movie"}
+          />
+          <MoviesSection
+            heading={"Latest TV Shows"}
+            pageNO={5}
+            category={"TV"}
+          />
           <MoviesSection heading={"Coming Soon"} pageNO={8} category={"Soon"} />
         </section>
         <DefaultFooter />

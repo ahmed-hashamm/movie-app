@@ -8,6 +8,7 @@ import { navLinks } from "@/utils/data";
 export const LandingPageNav = () => {
   const [nav, setNav] = useState(false);
   return (
+    // {desktop view}
     <nav className="px-6 py-4 bg-[#000]  h-16 w-full flex justify-between items-center  font-medium leading-10 tracking-widest">
       <div className="logo">
         <Image src={logo} width={120}></Image>
@@ -30,6 +31,7 @@ export const LandingPageNav = () => {
         <GiHamburgerMenu className="pb-[1px]" />
         <span>Menu</span>
       </button>
+      {/* {mobile view} */}
       {nav && (
         <div className="absolute top-[60px] w-2/3 z-[2]  right-0 flex justify-center ">
           <ul className="absolute top-18 rounded-lg flex flex-col bg-black  w-full py-4 items-center text-white     ">

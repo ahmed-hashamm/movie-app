@@ -14,7 +14,7 @@ const MoviesPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [filterDropdown, setFilterDropdown] = useState(false);
   const { login, setLogin } = useGlobalContext();
-  const totalPages = 10; // Adjust this based on your data
+  const totalPages = 10; 
 
   const handlePageChange = (newPage) => {
     setCurrentPage(newPage);
@@ -25,7 +25,7 @@ const MoviesPage = () => {
   return (
     <>
     {login && (
-        <div className="fixed inset-0 bg-[#111111] bg-opacity-80 flex items-center justify-center z-50">
+        <div className="fixed inset-0 bg-[#060615] bg-opacity-80 flex items-center justify-center z-50">
           <LoginForm onClose={() => setLogin(false)} />
         </div>
       )}
