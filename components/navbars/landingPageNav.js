@@ -26,14 +26,16 @@ export const LandingPageNav = () => {
 
       <button
         onClick={() => setNav(!nav)}
-        className={`md:hidden  text-white rounded-sm flex justify-center items-center gap-x-2  px-3 ${nav? 'bg-[#5E5E5E]' : 'bg-[#121212]'} `}
+        className={`md:hidden  text-white rounded-sm flex justify-center items-center gap-x-2  px-3 ${
+          nav ? "bg-[#5E5E5E]" : "bg-[#121212]"
+        } `}
       >
         <GiHamburgerMenu className="pb-[1px]" />
         <span>Menu</span>
       </button>
       {/* {mobile view} */}
       {nav && (
-        <div className="absolute top-[60px] w-2/3 z-[2]  right-0 flex justify-center ">
+        <nav className="absolute top-[60px] w-2/3 z-[2]  right-0 flex justify-center ">
           <ul className="absolute top-18 rounded-lg flex flex-col bg-black  w-full py-4 items-center text-white     ">
             {navLinks.map(({ id, link, title }) => (
               <li key={id}>
@@ -43,7 +45,7 @@ export const LandingPageNav = () => {
               </li>
             ))}
           </ul>
-        </div>
+        </nav>
       )}
     </nav>
   );
