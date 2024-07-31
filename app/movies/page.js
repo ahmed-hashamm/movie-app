@@ -2,10 +2,10 @@
 import React, { useState } from "react";
 import FilterButton from "@/components/buttons/filterButton";
 import DefaultFooter from "@/components/footers/defaultFooter";
-import MoviesSection from "@/components/moviesSection/moviesSection";
+import MoviesSection from "@/components/displaySection/displaySection";
 import { DefaultNav } from "@/components/navbars/defaulNav";
 import Pagination from "@/components/pagination/pagination";
-import MobSearchBar from "@/components/homeHero/mobSearchBAr";
+import MobSearchBar from "@/components/searchBars/mobSearchBAr";
 import FilterComponent from "@/components/filter/filterComponent";
 import { useGlobalContext } from "@/context/Context";
 import LoginForm from "@/components/loginform/loginFOrm";

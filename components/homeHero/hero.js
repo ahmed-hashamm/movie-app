@@ -1,6 +1,6 @@
 import React from "react";
-import MobSearchBar from "./mobSearchBAr";
-import DesktopSearchBAr from "./desktopSearchBAr";
+import MobSearchBar from "../searchBars/mobSearchBAr";
+import DesktopSearchBAr from "../searchBars/desktopSearchBAr";
 const HomeHero = () => {
   return (
     <>

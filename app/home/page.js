@@ -4,7 +4,7 @@ import ShowsButton from "@/components/buttons/showsButton";
 import DefaultFooter from "@/components/footers/defaultFooter";
 import HomeHero from "@/components/homeHero/hero";
 import LoginForm from "@/components/loginform/loginFOrm";
-import MoviesSection from "@/components/moviesSection/moviesSection";
+import MoviesSection from "@/components/displaySection/displaySection";
 import { DefaultNav } from "@/components/navbars/defaulNav";
 import Socials from "@/components/socials/socials";
 import { useGlobalContext } from "@/context/Context";
