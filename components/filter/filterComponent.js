@@ -1,6 +1,6 @@
 import { countries, genres } from "@/utils/data";
 import React from "react";
-const FilterComponent = ({ visibility }) => {
+const FilterComponent = ({ visibility,onClick }) => {
   return (
     <section
       className={`${visibility} transition duration-500 bg-[#252627] p-6 px-10 text-white`}
@@ -99,7 +99,7 @@ const FilterComponent = ({ visibility }) => {
           <button className="bg-yellow-500 hover:bg-yellow-600 text-black py-2 px-4 rounded-full">
             Filter
           </button>
-          <button className="bg-gray-500 hover:bg-gray-600 text-white py-2 px-4 rounded-full">
+          <button onClick={onClick} className="bg-gray-500 hover:bg-gray-600 text-white py-2 px-4 rounded-full">
             Close
           </button>
         </div>

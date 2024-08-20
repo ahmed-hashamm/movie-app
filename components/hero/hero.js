@@ -1,7 +1,7 @@
 import { logo } from '@/public'
 import Image from 'next/image'
 import React from 'react'
-import SearchBar from './searchBar'
+import SearchBar from '../searchBars/searchBar'
 
 const Hero = () => {
   return (

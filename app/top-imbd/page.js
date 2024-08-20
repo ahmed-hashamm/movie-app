@@ -9,14 +9,13 @@ import MobSearchBar from "@/components/searchBars/mobSearchBAr";
 import FilterComponent from "@/components/filter/filterComponent";
 import { useGlobalContext } from "@/context/Context";
 import LoginForm from "@/components/loginform/loginFOrm";
-
 const MoviesPage = () => {
   const [currentPage, setCurrentPage] = useState(20);
   const [filterDropdown, setFilterDropdown] = useState(false);
 
   const { login, setLogin } = useGlobalContext();
 
-  const totalPages = 30; // Adjust this based on your data
+  const totalPages = 30; 
 
   const handlePageChange = (newPage) => {
     setCurrentPage(newPage);
