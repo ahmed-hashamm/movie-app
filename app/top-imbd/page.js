@@ -48,7 +48,7 @@ const MoviesPage = () => {
           </h1>
           <FilterButton onClick={handleFilterDropdown} />
         </div>
-        <FilterComponent visibility={filterDropdown ? "block" : "hidden"} />
+        <FilterComponent onClick={handleFilterDropdown} visibility={filterDropdown ? "block" : "hidden"} />
       </div>
       <section className="bg-[#282828] md:bg-[#111111] py-2 lg:py-10 ">
         <Pagination
