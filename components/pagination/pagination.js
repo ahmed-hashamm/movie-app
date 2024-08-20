@@ -4,7 +4,7 @@ import { MdKeyboardDoubleArrowLeft } from "react-icons/md";
 import { CgArrowLongRight } from "react-icons/cg";
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 
-const Pagination = ({ currentPage, onPageChange, totalPages,visibility }) => {
+const Pagination = ({ currentPage, onPageChange, totalPages }) => {
   const [maxVisiblePages, setMaxVisiblePages] = useState(3);
 
   const getPageNumbers = () => {
@@ -88,8 +88,10 @@ const Pagination = ({ currentPage, onPageChange, totalPages,visibility }) => {
           key={page}
           className={`py-2 px-4 rounded-full ${
             page === currentPage
-              ? "bg-[#FFE400] text-black"
+              ? " bg-[#FFE400] text-black"
               : "text-white hover:bg-black"
+          }  ${
+            currentPage > 9 && "py-3"
           }`}
           onClick={() => handlePageChange(page)}
         >
